@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        function Employee(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        /*
+           function Employee(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+
+            public function(){
+               return this.firstname + " " + this.lastname + "<br>"; 
+            }
+
+            }
+
+            // Both the function works as same, the only difference is first one is define during the initialization of func whereas other func is prototype func, this is used after the creation of methods....
+
+            Employee.prototype.fullname = function(){
+            return this.firstname + " " + this.lastname + "<br>";
+            }
+        */
+
+        Employee.prototype.fullname = function(){
+            return this.firstname + " " + this.lastname + "<br>";
+        }
+
+        var emp1 = new Employee('Kl.', 'Rahaul');
+        var emp2 = new Employee('Hardik', 'Pandya');
+
+        document.writeln(emp1.fullname());
+        document.writeln(emp2.fullname());
+    </script>
+</body>
+</html>

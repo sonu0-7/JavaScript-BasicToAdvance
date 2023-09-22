@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Number Object </title>
+    <style type="text/css">
+        h1{
+            text-align: center;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <h1> javascript Number & Number Constants </h1>
+    <script type="text/javascript">
+        /* Defing the number */
+        var x = 20;
+        var y = 20.45;
+        var z = 45e2;
+        var n = new Number(16);
+
+        document.writeln("<h2> MIN_VALUE is registered in JS : " + Number.MIN_VALUE + "</h2>");
+        document.writeln("<h2> MAX_VALUE is registered in JS : " + Number.MAX_VALUE + "</h2>");
+        document.writeln("<h2> POSITIVE_INFINITY is registered in JS : " + Number.POSITIVE_INFINITY + "</h2>");
+        document.writeln("<h2> NEGATIVE_INFINITY is registered in JS : " + Number.NEGATIVE_INFINITY + "</h2>");
+
+        const str = new String("10");
+        // const str2 = Number.parseInt(str);
+
+        document.writeln("<br><br> Converet String into integer using parseInt() : " + Number.parseInt(str));
+        // document.writeln("<br> checking the type of '10' is : " + typeof str2 );
+
+        document.writeln("<h4>--------------------- toFixed()---------------------------- </h4>");
+
+        document.writeln("Value of PI is : " + Math.PI.toFixed(2));
+        
+        document.writeln("<h4>--------------------- toExponential()---------------------------- </h4>");
+        let a = 2;
+        let b = 5;
+        
+        document.writeln("Convert '2' to Exponential Number base with '2' : " + a.toExponential(2));
+        document.writeln("<br>Convert '5' to Exponential Number base with '5' : " + b.toExponential(5));
+
+        document.writeln("<h4>--------------------- toPrecision()---------------------------- </h4>");
+
+        document.writeln("Value of PI is in String : " + Math.PI.toPrecision(3));
+    </script>
+</body>
+</html>

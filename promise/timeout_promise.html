@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback using promise Example</title>
+</head>
+<body>
+    <p>The result will be display after 3 Seconds...</p>
+    <p id="result"></p>
+
+    <script>
+
+        let myPromise = new Promise(function(myResolve, myReject){
+            setTimeout(function(){
+                myResolve("Wow, I'm enjoying to Learn JavaScript from this Tutorials");
+            } ,3000);
+        });
+
+        myPromise.then(function myResolve(value){
+            document.getElementById('result').innerHTML = value;
+        });
+    </script>
+</body>
+</html>

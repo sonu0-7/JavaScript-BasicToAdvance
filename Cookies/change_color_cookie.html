@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+</head>
+<body>
+    <select id="color" onchange="getColor()">
+        <option value="Select color">----Select the Color-----</option>
+        <option value="cyan">Cyan</option>
+        <option value="pink">Pink</option>
+        <option value="skyblue"> Sky Blue</option>
+    </select>
+
+    <script>
+        function getColor(){
+            var value = document.getElementById('color').value;
+            if(value != "Select color"){
+                document.bgColor = value;
+                document.cookie = "color = " + value;
+            }
+        }
+
+        window.onload = function(){
+            if(document.cookie.length != 0){
+                var array = document.cookie.split("=");
+                document.getElementById("color").value = array[2];  
+                document.bgColor = arary[2];
+            }
+        }
+    </script>
+</body>
+</html>

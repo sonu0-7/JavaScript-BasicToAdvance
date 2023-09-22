@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        function Employee(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        Employee.prototype.company = 'LearnVern';
+
+        var emp1 = new Employee('Kl.', 'Rahaul');
+        var emp2 = new Employee('Hardik', 'Pandya');
+
+        document.writeln(emp1.firstname + " " + emp1.lastname + " " + emp1.company + "<br>");
+        document.writeln(emp2.firstname + " " + emp2.lastname + " " + emp2.company + "<br>");
+        /*
+            let a = 3;
+            document.writeln(3 + +"3");
+            output-> 6 it means +"3" convert into integer 3.
+        */
+    </script>
+</body>
+</html>

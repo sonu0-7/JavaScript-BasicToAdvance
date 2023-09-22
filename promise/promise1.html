@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of promise</title>
+</head>
+<body>
+    
+    <p id="result"></p>
+
+    <script>
+        function display(args){
+            document.getElementById('result').innerHTML = args;
+        }
+
+        let promise = new Promise(function(myResolve, myReject){
+            let x = 1;
+
+            if(x == 1){
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+
+        promise.then(
+            function myResolve(value){ display(value); },
+            function myReject(error){ display(); }
+        );
+    </script>
+</body>
+</html>

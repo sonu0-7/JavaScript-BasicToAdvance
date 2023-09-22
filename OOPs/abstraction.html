@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example abstract prototype object</title>
+</head>
+<body>
+    <script>
+        // function Vehicle(){
+        //     // this.vehicleName = vehicleName;
+        //     throw new Error("You cannot Create an instance of abstract class");
+        // }
+
+        // Vehicle.prototype.display = function(){
+        //     return this.vehicleName;
+        // }
+        // var newObject = new Vehicle();
+
+        document.writeln("<hr>");
+        function Vehicle(){
+            this.vehicleName = vehicleName;
+            throw new Error("You cannot create an instance of abstract class");
+        }
+
+        Vehicle.prototype.display = function(){
+            return "Vehicle Name : " + this.vehicleName;
+        }
+
+        function Bike(vehicleName){
+            this.vehicleName = vehicleName;
+        }
+
+        Bike.prototype = Object.create(Vehicle.prototype);
+        var bike = new Bike("Dukati");
+
+        document.writeln(bike.display());
+
+        document.writeln("<br><br> Now I'm checking the instance of : -> <br>");
+        document.writeln("instance of Vehicle : " + (bike instanceof Vehicle) + "<br>");
+        document.writeln("instance of Bike : " + (bike instanceof Bike));
+    </script>
+</body>
+</html>

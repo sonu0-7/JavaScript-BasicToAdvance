@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example entries()</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = ["HTML","CSS","Javascript"];
+
+		var result = arr.entries();
+
+		document.writeln(result.next().value + "<br>");
+		document.writeln(result.next().value + "<br>");
+		document.writeln(result.next().value + "<br>");
+		document.writeln(result.next().value + "<br>");
+		
+		/*
+			Note: 
+				var someVariable = array.entries();
+				It is need to store the result in some variable because if we not store then always returns the first element of the array
+				eg. arr1.entries().next().value()  if we print in console or on at the document... 
+					Always return first element's value of the particular array
+		*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Class</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Math Method </h1>
+    <script type="text/javascript">
+        /* abs() */
+        document.write("<h3> abs() </h3><hr>");
+        var num = -4;
+        document.writeln("Absolute value of " +  num  + " is : " + Math.abs(num));
+        document.writeln("<br>Absolute value of [] is : " + Math.abs([]));
+        document.writeln("<br>Absolute value of [2,7] is : " + Math.abs([2,7]));
+        document.writeln("<br>Absolute value of empty is : " + Math.abs());
+        document.writeln("<br>Absolute value of null is : " + Math.abs(null));
+        document.writeln("<br>Absolute value of 0 is : " + Math.abs(0));
+        
+        /* ceil() */
+        num = 4.2;
+        document.write("<h3> ceil() </h3><hr>");
+        document.writeln("Ceil value of " +  num  + " is : " + Math.ceil(num));
+        document.writeln("<br>Ceil value of -4.2 is : " + Math.ceil(-4.2));
+
+        /* exp() */
+        document.write("<h3> exp() </h3><hr>");
+        document.writeln("Exp value of 1 is : " + Math.exp(1));
+        document.writeln("<br>Ceil value of -4.2 is : " + Math.ceil(-4.2));
+
+        /* rand() */
+
+        function randomNumber(){
+            return Math.random()*1000000;
+        }
+
+        document.write("<h3> rand() </h3><hr>");
+        document.writeln("Random value between 0 and 1 is : " + Math.random());
+        document.writeln("<br>Create random value for OTP is : " + Math.round(randomNumber()));
+
+    </script>
+</body>
+</html>

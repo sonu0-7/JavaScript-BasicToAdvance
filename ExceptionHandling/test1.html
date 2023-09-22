@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+</head>
+<body>
+    <p id="fruits"></p>
+    <p id="cars"></p>
+    <script>
+        var x;
+        var carInput = document.getElementById('cars');
+        var fruits = new Array("Apple", "Mango", "Orange", "Watermelon");
+        try{
+            for(value of fruits){
+                // document.getElementById("fruits").innerHTML = "Fruits array are : " + value ;
+                document.writeln("✓ " + value + "<br>");
+            }
+            x = document.write(cars);
+            if(x) throw 'undefined';
+        } catch(e){
+            carInput.innerHTML = "cars array is " + x;
+            // document.write("Cars Array are " + x);
+        }
+    </script>
+</body>
+</html>

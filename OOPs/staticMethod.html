@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method ()</title>
+</head>
+<body>
+    <script>
+        class Test{
+            static display(){
+                return "A static method is called";
+            }
+        }
+
+        document.writeln(Test.display() + "<br>");
+
+        /* Using Constructor call to static function*/
+
+        class Demo{
+            constructor(){
+                document.writeln(Demo.show() + "<br>");
+                document.writeln(this.constructor.show());
+            }
+
+            static show(){
+                return "A Static function is called using consstructor";
+            }
+        }
+
+        var t = new Demo();
+
+        /* Other Example */
+        document.writeln("<h3> Example</h3><hr>");
+
+        class Check{
+            static display(){
+                return "Static Method Called";
+            }
+
+            show(){
+                document.writeln(Check.display() +"<br>");
+                return "No-Static Method Called";
+            }
+        }
+        
+        var s = new Check();
+        s.show();
+    </script>
+</body>
+</html>

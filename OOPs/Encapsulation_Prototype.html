@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation with Prototype</title>
+</head>
+<body>
+    <script>
+        function Student(name, marks){
+            var sName = name;
+            var sMarks = marks;
+
+            Object.defineProperties(this, "name", {
+                get:function(){
+                    return sName;
+                },
+                set:function(sName){
+                    this.sName = sName;
+                }
+            });
+            
+            Object.defineProperties(this, "marks", {
+                get:function(){
+                    return sMarks;
+                },
+                set:function(sMarks){
+                    this.sMarks = sMarks;
+                }
+            });
+        }
+
+        var stud = new Student("sonu", 95);
+        document.writeln(stud.name + " has secured " + stud.marks + " marks");
+    </script>
+</body>
+</html>

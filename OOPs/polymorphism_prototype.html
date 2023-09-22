@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example polymorphism prototype</title>
+</head>
+<body>
+    <script>
+        function A(){
+
+        }
+        A.prototype.display = function(){
+            return "A class's display method is called";
+        }
+
+        function B(){
+
+        }
+        B.prototype = Object.create(A.prototype);
+
+        var a = [new A(), new B()];
+        a.forEach(function(message){
+            document.writeln(message.display() + "<br>");
+        })
+    </script>
+</body>
+</html>

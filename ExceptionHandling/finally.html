@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Finally</title>
+</head>
+<body>
+    Please Enter the number between 5 to 10 : 
+    <input type="text" id="id1">
+    <p id="message"></p>
+    <p id="input1"></p>
+    <input type="button" value="Validate" onclick="onClick()">
+    <script>
+        function onClick(){
+            try{
+                var input = document.getElementById('input1');
+                var message = document.getElementById('message');
+                message.innerHTML = " ";
+                var x = document.getElementById('id1').value;
+                if(x < 5 || x > 10 || x == " " || isNaN(x)){
+                    if(x=="") throw "is empty";
+                    if(x > 10) throw "should not be greater than 10";
+                    if(x < 5) throw "should not be less than 5";
+                    if(isNaN(x)) throw "is not a number";
+                } else {
+                    message.innerHTML = x + " is validated Successfully..";
+                }
+            } catch (e){
+                message.innerHTML = "input " + e;
+            } finally {
+                input.innerHTML = "Input value : " + x;
+            }
+        }
+    </script>
+</body>
+</html>

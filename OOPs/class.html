@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Class</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(id, name){
+                this.id = id;
+                this.name = name;
+            }
+
+            empDetails(){
+                document.writeln(this.id + " " + this.name);
+            }
+        }
+
+        var obj1 = new Employee(1, 'Ranjo');
+        obj1.empDetails();
+
+        /* Class Expressions */
+        // Unnamed Class
+        document.write("<hr>");
+        
+        var abc = class {
+            constructor(id, name){
+                this.id = id;
+                this.name = name;
+            }
+        }
+        
+        document.writeln(abc.name);
+        
+        /* Class Expressions */
+        // Re-declaring Class
+        document.write("<hr>");
+        document.write("<h3> Using Re-Declaring the Class </h3>");
+        var emp = class {
+            constructor(id, name){
+                this.id = id;
+                this.name = name;
+            }
+
+            empDetails(){
+                document.writeln(this.id + " " + this.name + "<br>");
+            }
+        }
+
+        var obj1 = new emp(2, 'Raj');
+        obj1.empDetails();
+
+        // Again declaring the same class
+
+        var emp = class {
+            constructor(id, name){
+                this.id = id;
+                this.name = name;
+            }
+
+            empDetails(){
+                document.writeln(this.id + " " + this.name + "<br>");
+            }
+        }
+
+        var warrior = new emp(3, 'Warrior');
+        warrior.empDetails();
+
+    </script>
+</body>
+</html>

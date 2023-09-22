@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+</head>
+<body>
+    <script>
+        var x = history.length;
+        document.writeln("<h5>Current Page History is : " + x + "</h5>");
+
+        /* back() */
+        function goBack(){
+            window.history.back();
+            // Both are same 
+            // history.back();
+        }
+    </script>
+    <input type="button" value="Back" onclick="goBack()">
+</body>
+</html>

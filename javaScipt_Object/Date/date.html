@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Date()</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /* Using Date() */
+        var d1 = new Date();
+        document.writeln("Today is : " + d1);
+        document.writeln("<br><br>");
+        
+        /* Using Date(year, month, day, hours, minutes, seconds, miliseconds) */
+        // month consider 0-11 it means(jan-Dec)
+        var d2 = new Date(2023, 6, 7, 16, 40, 35, 0);
+        document.writeln("Date is : " + d2);
+        
+        /* Using Date(dateString) */
+        var d3 = new Date("October 12,2014 12:56:45");
+        document.writeln("<br><br>Date is : " + d3);
+
+
+        /* Get methods() */
+        /* getDay() */
+        document.writeln("<h1> getDay() </h1><hr>");
+        var d = new Date();
+        var day = d.getDay();
+        var month = d.getMonth();
+
+        // document.writeln("Day is : " +d.getDay() + " Of this Weeks");
+        // document.writeln("<hr>Date is : " +d.getDate() + " Of this Month");
+
+        switch (day) {
+            case 0:
+                day = "Sunday";
+                break;
+            
+            case 1:
+                day = "Monday";
+                break;
+            
+            case 2:
+                day = "Tuesday";
+                break;
+            
+            case 3:
+                day = "Wednesday";
+                break;
+            
+            case 4:
+                day = "Thursay";
+                break;
+            
+            case 5:
+                day = "Friday";
+                break;
+            
+            case 6:
+                day = "Saturday";
+        }
+        document.writeln("Today Day is : " + day);
+
+        switch (month) {
+            case 0:
+                month = "January";
+                break;
+            
+            case 1:
+                month = "February";
+                break;
+            
+            case 2:
+                month = "March";
+                break;
+            
+            case 3:
+                month = "April";
+                break;
+            
+            case 4:
+                month = "May";
+                break;
+            
+            case 5:
+                month = "June";
+                break;
+            
+            case 6:
+                month = "July";
+                break;
+                
+            case 7:
+                month = "August";
+                break;
+            case 8:
+                month = "Septemeber";
+                break;
+            case 9:
+                month = "October";
+                break;
+            case 10:
+                month = "November";
+                break;
+            case 11:
+                month = "December";
+        }
+        document.writeln("<br><br> This Month is : " + month);
+
+        document.writeln("<hr>");
+        document.writeln("using toString() : " + d1.toString());
+        document.writeln("<br><br>using toDateString() : " + d1.toDateString());
+        document.writeln("<br><br>using toTimeString() : " + d1.toTimeString());
+    </script>
+</body>
+</html>

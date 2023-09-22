@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple cookie with Object</title>
+</head>
+<body>
+    Name : <input type="text" id="name">
+    Email : <input type="text" id="email">
+    CompanyName : <input type="text" id="companyName">
+    <br><br>
+    <input type="button" value="setCookie" onclick="setCookie()">
+    <input type="button" value="getCookie" onclick="getCookie()">
+
+    <script>
+        function setCookie(){
+            var obj = {};
+            obj.name = document.getElementById('name').value;
+            obj.email = document.getElementById('email').value;
+            obj.companyName = document.getElementById('companyName').value;
+            
+            var objString = JSON.stringify(obj);
+            document.cookie = objString;
+        }
+
+        function getCookie(){
+            if(document.cookie.length !=0){
+                var obj2 = JSON.parse(document.cookie);
+                alert("Name : " + obj2.name + "\nEmail : " + obj2.email + "\nCompanyName : " + obj2.companyName);
+            } else {
+                alert("Cookie is not set yet.");
+            }
+        }
+    </script>
+</body>
+</html>

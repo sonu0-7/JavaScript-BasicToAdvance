@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /* charAt() */
+        // var str = "Hello everyone, This is Sonu Speaking.";
+        // document.writeln("Character at 10th position is : " + str.charAt(10));
+
+         /* charCodeAt() */
+        // document.writeln("<br>" + "Character at 10th position is (ASCII value): " + str.charCodeAt(10));
+
+        /* concat() */
+        // var str2 = " This is the demo text for testing purpose";
+        // document.writeln("<br>" + "Combine the two strings: " + str.concat(str2));
+
+        /* indexOf() */
+        // document.writeln("<br>" + "Index of 'y' in str String : " + str.indexOf(y));
+
+        /* lastIndexOf() */
+        // console.log("<br> Index of 'y' in str String : " + str.lastIndexOf(y));
+
+        /* search() */ 
+        // var str3 = "Hello i'm learning javascript. Javascript is a scripting language.";
+        // document.writeln("<br><br> check if 'javascript' exist in str3 : " + str3.search('javascript'));
+        // console.log("check if 'javascript' exist in str3 : " + str3.search('javascript'));
+        
+        /* To Remove the case sensitivity of the search string */
+        // console.log("check if 'javascript' exist in str3 : " + str3.search(/Javascript/i));
+        
+        /* match() */ 
+        // console.log("match if 'java' exist in str3 : " + str3.match('java'));
+        // console.log("match if 'Language' exist in str3 : " + str3.match('Language'));
+        // console.log("match if 'Language' exist in str3 : " + str3.match(/Language/i));
+
+        const custm_str = "HTML, Html is used for web designing..";
+        const test = "Hii, Sonu kumar kushHaha";
+
+        document.writeln('Corrected String is : ' + test.replace('Haha', 'waha'));
+        /* i-> it is used for ignore the case sensitivity and g-> stand for global */
+        document.writeln('<br><br>Replace all the string is : ' + custm_str.replace(/HTML/ig, 'CSS'));
+
+        /* substr() */
+        document.writeln("<br><br> sting after using substr() is : " + custm_str.substr());
+        document.writeln("<br> sting after using substr(10) is : " + custm_str.substr(10));
+        document.writeln("<br> sting after using substr(10, 15) is : " + custm_str.substr(10,15));
+        document.writeln("<br> sting after using substr(-14, 10) is : " + custm_str.substr(-14,10));
+
+        /* subString() */
+        document.writeln("<br><br> sting after using substring() is : " + custm_str.substring());
+        document.writeln("<br> sting after using substring(10) is : " + custm_str.substring(10));
+        document.writeln("<br> sting after using substring(10, 15) is : " + custm_str.substring(10,15));
+        
+        /* slice() */
+        document.writeln("<br><br> sting after using slice() is : " + custm_str.slice());
+        document.writeln("<br> sting after using slice(10) is : " + custm_str.slice(10));
+        document.writeln("<br> sting after using slice(10,20) is : " + custm_str.slice(10,20));
+        document.writeln("<br> sting after using slice(-10) is : " + custm_str.slice(-10));
+        document.writeln("<br> sting after using slice(-10,-7) is : " + custm_str.slice(-10,-7));
+        
+        /* trim() */
+        const trimStr = "      this is            the demo text for trim        test        ";
+        document.writeln("<br><br> Before Applying trim() string is : " + trimStr);
+        var afterTrimStr = trimStr.trim();
+        document.writeln("<br> After Applying trim() string is : " + trimStr.trim());
+
+        /* valueOf() */
+        document.writeln("<br><br>String using valueOf() is : " + trimStr);
+
+        /* split() */
+        document.writeln("<br><br>String after apply split() on before trim string is : " + trimStr.split(" "));
+        document.writeln("<br><br>String after apply split(in trim str can see both left & right remove whitespace) on after trim string is : " + afterTrimStr.split(" "));
+        </script>
+</body>
+</html>

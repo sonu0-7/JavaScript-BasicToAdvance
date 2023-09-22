@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ondblclick with Example</title>
+</head>
+<body>
+    <!-- using HTML -->
+    <button ondblclick="onDoubleClick()">doubleClick</button>
+
+    <!-- using javascript func -->
+
+    <input type="button" value="doubleClick" id="dblbtn">
+
+    <!-- for addEventListner using javascript event -->
+    <input type="button" value="dblclick" id="dblclick">
+
+    <script>
+        // for HTMl
+        function onDoubleClick(){
+            document.body.style.backgroundColor = "pink";
+        }
+
+        // for javascript events
+
+        document.getElementById('dblbtn').ondblclick = function(){
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        // for addEventListner function 
+        document.getElementById('dblclick').addEventListener('dblclick', custFunc);
+        function custFunc(){
+            document.body.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method with the help of Example</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h3> every() </h3>");
+        var arr = new Array(2, 25, 12, 15, 30);
+
+        function verify(value){
+            return value>=20;
+        }
+
+        document.writeln("Original array are : " + arr + "<br>");
+        document.writeln("Check every elements in array if it's >=20 : " + arr.every(verify) + "<br><br>");
+        document.writeln("Copywithin func : " + arr.copyWithin(0,2,3) + "<br>");
+    </script>
+</body>
+</html>

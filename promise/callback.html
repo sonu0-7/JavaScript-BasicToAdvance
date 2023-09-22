@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback Example</title>
+</head>
+<body>
+    <p>The result will be display after 3 Seconds...</p>
+    <p id="result"></p>
+
+    <script>
+
+        setTimeout(function(){
+            myFunction("Wow, This is the Great Platform to learn JavaScript...");
+        },3000);
+
+        function myFunction(value){
+            document.getElementById('result').innerHTML = value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example promise chaining</title>
+</head>
+<body>
+    <script>
+
+        // function() OR () => both are same as per the ES (Ecma Script)
+
+        new Promise(function(resolve, reject){
+            setTimeout( () => { resolve(1)} , 2000);
+        }).then(function(value){
+            alert(value);
+            return value * 2;
+        }).then(function(value){
+            alert(value);
+            return value * 5;
+        }).then(function(value){
+            alert(value);
+        });
+    </script>
+</body>
+</html>

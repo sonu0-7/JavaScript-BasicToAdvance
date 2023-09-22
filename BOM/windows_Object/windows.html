@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style type="text/css">
+        input{
+            background-color:aqua;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="button" value="Click Me!" onclick="confirmFunc()"> -->
+    <input type="button" value="Open!" onclick="openFunc()">
+    <input type="button" value="Close!" onclick="closeFunc()">
+    <script type="text/javascript">
+        /* Alert message with window  */
+        //    window.alert("Hello, welcome to Open it first time..");
+
+        /* Alert message without window  */
+        //    alert("welcome again..");
+
+        function confirmFunc(){
+            var temp = confirm("Are you Sure?");
+            if(temp == true){
+                alert('The value is true');
+            } else {
+               alert("The value is false"); 
+            }
+        }
+        
+
+        function openFunc(){
+            open('http://www.google.com');
+        }
+        function closeFunc(){
+            close();
+        }
+    </script>
+</body>
+</html>

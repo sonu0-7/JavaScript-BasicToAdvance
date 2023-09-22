@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example onresize using javascript</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p>The window is resized : <span id="s">0</span></p>
+
+    <script>
+        var count = 0;
+        document.getElementsByTagName('BODY')[0].onresize = function(){
+            document.getElementById('p1').innerHTML = "Window width = " + window.outerWidth + "\nWindow Height = " + window.outerHeight;
+            count++;
+            document.getElementById('s').innerHTML = count;
+        }
+    </script>
+</body>
+</html>

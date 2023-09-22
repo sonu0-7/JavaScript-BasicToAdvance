@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object</title>
+</head>
+<body>
+    <div class="abc">
+        This is a Class.
+    </div>
+    <script>
+        function getData(){
+            var name = document.newForm.flname.value;
+            alert("welcome " +name);
+        }
+    
+        var x = document.getElementsByClassName("abc");
+        alert(x[0].innerText);
+    
+    </script>
+    <form name="newForm">
+        Enter your Name: <input type="text" name="flname">
+        <br><br>
+        <input type="button" value="Submit" onclick="getData()">
+    </form>
+</body>
+</html>

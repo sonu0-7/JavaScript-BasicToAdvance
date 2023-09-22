@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of await</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        async function myFunction(){
+            let promise = new Promise(function(resolve, reject){
+                setTimeout( function(){ resolve("Happy to know that you're learning JavaScript by itself...") } , 3000);
+            });
+
+            document.getElementById('result').innerHTML = await promise;
+        }
+
+        myFunction();
+    </script>
+</body>
+</html>

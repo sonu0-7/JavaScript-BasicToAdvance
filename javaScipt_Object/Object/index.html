@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        var temp = "";
+        var person = {
+            name : 'Sonu',
+            age : 22, 
+            email : 'sonu@gmail.com',
+            enroll : 65
+        }
+        // delete person.enroll;
+        for(data in person){
+            document.writeln(data + " : ");
+            document.writeln(person[data] + "<br>");
+            // temp = temp + person[data] + "<br>";
+        }
+        // document.writeln(temp);
+        document.write("<hr>");
+
+        var arr = ['CyberSecurity', 'Node js', 'JavaScript', 'HTML', 'CSS'];
+        // document.write(arr.length);
+        document.writeln("using for loop get the array data :<br> ");
+        for(i=0; i<=arr.length -1; i++){
+            document.writeln(arr[i] + "<br>");
+        }
+        document.write("<hr>");
+        document.writeln("using for of loop get the array data :<br> ");
+        var i = 1;
+        for(arrData of arr){
+            document.writeln(i + ". ");
+            document.writeln(arrData + "<br>");
+            i++;
+        }
+        document.write("<hr>");
+        document.writeln('using for of loop for string data :<br> ');
+        const str = "CYBERSECURITY";
+        for(data of str){
+            document.writeln(data + "<br>");
+        }
+
+        // const num = 5;
+        // document.write(typeof (arrData));
+        document.write('age' in person);
+    </script>
+</body>
+</html>

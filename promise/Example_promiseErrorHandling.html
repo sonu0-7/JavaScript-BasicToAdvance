@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Promise with Error Handling</title>
+</head>
+<body>
+    <script>
+        var input = prompt('Enter the id : ');
+        let userAuthorized = false;
+
+        function getUserById(id){
+           
+            if(isNaN(input)){
+                if(userAuthorized !== true){
+                    throw 'User is not Authorized, access denied';
+                }
+            }
+
+            return new Promise((resolve, reject) => {
+                resolve({
+                    id : id,
+                    usertype : 'Admin'
+                });
+            });
+        }
+
+        try{
+            getUserById(input).then(user => document.writeln(`UserType : ${user.usertype}`)).catch(error => document.write(`Caught by ${error}`));
+        }catch(error){
+            document.writeln(`Caught by try/catch ${error}`);
+        }
+    </script>
+</body>
+</html>

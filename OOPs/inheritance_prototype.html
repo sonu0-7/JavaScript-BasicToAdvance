@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Inheritance prototype based approach</title>
+</head>
+<body>
+    <script>
+        function Bike(company){
+            this.company = company;
+        }
+
+        Bike.prototype.getCompany = function(){
+            return this.company;
+        }
+
+        function Vehicle(name, price){
+            this.name = name;
+            this.price = price;
+        }
+
+        var bike = new Bike("Honda");
+        // here assign the child class of bike always vehicle will made the child class of Bike..
+        Vehicle.prototype = bike;
+
+        var v1 = new Vehicle("CBR", 120000);
+        document.writeln("Bike name : " + v1.name + "<br>");
+        document.writeln("Bike Price : " + v1.price + "<br>");
+        document.writeln("Bike Company : " + v1.company + "<br>");
+    </script>
+</body>
+</html>

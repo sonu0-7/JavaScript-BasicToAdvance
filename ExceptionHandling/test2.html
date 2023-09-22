@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+</head>
+<body>
+    Enter the no for Divison :
+    <input type="text" id="no">
+    <input type="button" value="Division" onclick = "check()">
+    <p id="exception"></p>
+    <p id="exp"></p>
+    <script>
+        var n = document.getElementById('no').value;
+        var x;
+        function check(){
+            try{
+                if(x = (n / 0)) throw " It is not possible to divide by 0";
+            }catch(e){
+                // alert(x);
+                document.getElementById('exp').innerHTML = x;
+            }finally{
+                // document.write("Exception Handled Successfully");
+                document.getElementById('exception').innerHTML = "Exception Handled Successfully";
+            }
+        }
+    </script>
+</body>
+</html>
